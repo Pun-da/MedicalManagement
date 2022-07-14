@@ -1,0 +1,97 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+<head>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('https://thumbs.dreamstime.com/b/medicine-doctor-stethoscope-touching-medical-icons-network-medicine-doctor-stethoscope-touching-icons-medical-network-111489030.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .jumbotron2 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h5,
+    h3 {
+      text-align: center;
+    }
+
+
+    .alert {
+      margin: 0px;
+    }
+
+
+
+    .glow {
+      font-size: 50px;
+      color: white;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+    
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #4d88ff, 0 0 40px #4d88ff, 0 0 50px #4d88ff, 0 0 60px #4d88ff, 0 0 70px #4d88ff, 0 0 80px #4d88ff;
+      }
+    }
+
+  </style>
+</head>
+<br>
+<br>
+
+<div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+  <br>
+  <h5 class="display-3 glow"> </h5>
+  <br><br><br><br><br>
+  <p>
+  <h3></h3>
+
+  
+  <br><br>
+</div>
+
+<div  class="jumbotron2" style="margin-bottom: 0px;margin-top: 0px;">
+  <br><br><br>
+  <p><h6 style="font-size: 50px;
+    color: black;
+    text-align: center;">
+  
+    <!-- <center>Medical Care System</center> -->
+    <marquee attribute_name = "attribute_value"....more attributes>
+      Medical Care System
+   </marquee>
+  </h6>
+  
+  
+  </p>
+
+</div>
+<br><br><br><br>
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+<br><br><br>
+
+
+{% include "hospital/footer.html" %}
+{%endblock content%}

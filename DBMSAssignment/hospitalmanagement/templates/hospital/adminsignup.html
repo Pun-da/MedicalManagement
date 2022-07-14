@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Admin Signup</title>
+  <style type="text/css">
+    body {
+      color: #aa082e;
+      
+      padding: 15px;
+  background: #9053c7;
+  background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+      font-family: 'Roboto', sans-serif;
+    }
+
+    a:link {
+      text-decoration: none;
+      color:blue;
+    }
+
+    .note {
+      text-align: center;
+      height: 80px;
+      
+      background-color: black;
+      font-weight: bold;
+      line-height: 80px;
+    }
+    .form-group{ 
+  position: relative;
+  display: block;
+    margin: 0;
+    padding: 0;
+}
+    .form-content {
+      padding: 5%;
+      border: 1px solid #ced4da;
+      margin-bottom: 2%;
+      background-color: white;
+      background-image: url("https://media.istockphoto.com/vectors/login-page-on-laptop-screen-notebook-and-online-login-form-sign-in-vector-id1135341047?k=20&m=1135341047&s=612x612&w=0&h=ai30N4N8VC_uylITs2bWfJ0k3GzbWn-q0nR664tj0tk=");
+      background-position: right; 
+  background-repeat: no-repeat;
+  background-size: 550px;
+    }
+
+    .form-control {
+      border-radius: 1.5rem;
+    }
+    
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: #3d9647;
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  {% include "hospital/navbar.html" %}
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+  <form method="post">
+    {% csrf_token %}
+    <div class="container register-form">
+      <div class="form">
+        <div class="note">
+          <p style="font-family:'Poppins-Bold';font-size: 24px;
+          color: white;
+          
+          text-align: center;
+        
+          width: 100%;
+          display: block;">Sign Up</p>
+        </div>
+
+        <div class="form-content">
+          <div class="row" style="background-color: transparent">
+            <div class="col-md-6">
+              <div class="form-group">
+                {% render_field form.first_name class="form-control" placeholder="First Name"  %}
+              </div>
+              <div class="form-group">
+                {% render_field form.username class="form-control" placeholder="Username" %}
+              </div>
+
+            
+              <div class="form-group">
+                {% render_field form.last_name class="form-control" placeholder="Last Name" %}
+              </div>
+              <div class="form-group">
+                {% render_field form.password class="form-control" placeholder="Password" %}
+              </div>
+
+            </div>
+          </div>
+          <button type="submit" class="btnSubmit">Submit</button><br>
+          <div><br><p style="text-align: left;"> Already have an account? <a href="adminlogin">Login here</a></p></div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+  
+  <br><br><br><br>
+  {% include "hospital/footer.html" %}
+</body>
+
+</html>
