@@ -1,2 +1,0 @@
-# Medical-Care# MedicalManagementSystem
-# MedicalManagement
